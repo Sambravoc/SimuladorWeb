@@ -16,7 +16,7 @@ import DarkFooter from "components/Footers/DarkFooter.js";
 //import Tabs from "./index-sections/Tabs.js";
 //import Pagination from "./index-sections/Pagination.js";
 //import Notifications from "./index-sections/Notifications.js";
-//import Typography from "./index-sections/Typography.js";
+import Typography from "./index-sections/Typography.js";
 //import Javascript from "./index-sections/Javascript.js";
 //import Carousel from "./index-sections/Carousel.js";
 //import NucleoIcons from "./index-sections/NucleoIcons.js";
@@ -43,6 +43,7 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
+        <Typography />
   {/*        <Images />
           <BasicElements />
            <Navbars />

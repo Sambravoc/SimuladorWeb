@@ -26,7 +26,7 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter"> 
         <div
           className="page-header-image"
           style={{
@@ -43,9 +43,8 @@ function IndexHeader() {
             ></img>
             <h1 className="h1-seo" >LTWeb</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button variant="contained" color="info" size="lg"
-              href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nukr-index-navbar"
-              >Ir al simulador</Button>
+              <Button variant="contained" color="info" size="lg" href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio"
+              ><strong>Ir al simulador</strong></Button>
           </div>
           <h6 className="category category-absolute">
             Universidad de Colima
