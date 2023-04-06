@@ -1,16 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import InfoSimulador from 'pages/info';
+
 // reactstrap components
 import {
-  Button,
   Collapse,
   NavbarBrand,
   Navbar,
-  NavItem,
- // NavLink,
   Nav,
   Container,
-  UncontrolledTooltip,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -86,11 +83,11 @@ function IndexNavbar() {
                   <strong>NOSOTROS</strong>
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem href="/nosotros/opcion1">
-                    Opción 1
+                  <DropdownItem href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio" >
+                    Visita nuestra pagina
                   </DropdownItem>
-                  <DropdownItem href="/nosotros/opcion2">
-                    Opción 2
+                  <DropdownItem onClick={() => <InfoSimulador />}>
+                    Acerca del Simulador
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
