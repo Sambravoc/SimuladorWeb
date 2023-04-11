@@ -30,8 +30,8 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import BasicElements from "views/index-sections/BasicElements";
-import { Carousel } from "reactstrap";
+//import BasicElements from "views/index-sections/BasicElements";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -55,11 +55,6 @@ root.render(
         <Route
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
-        />
-
-        <Route
-          path="/x"
-          render={(props) => <Carousel {...props} />}
         />
         
         <Redirect to="/index" />

@@ -53,7 +53,7 @@ function IndexNavbar() {
             <NavbarBrand
             // (aquí agregamos el link que llevará al inicio, solo cambiamos link.)
               href="/"
-              // target="_blank" *Para abrir otra ventana en la web*/
+              // target="_blank" *Para abrir otra ventana en la web
               id="navbar-brand"
             >
               Simulador Web
