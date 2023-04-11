@@ -16,6 +16,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import CarouselSection from "views/index-sections/Carousel";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -36,11 +37,14 @@ function LandingPage() {
       <ExamplesNavbar />
       <div className="wrapper">
         <LandingPageHeader />
+      <div className="main ml-auto mr-auto text-center">
+      <h2 className="title">Who we are?</h2>
+        <CarouselSection/>
+      </div>
         <div className="section section-about-us">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Who we are?</h2>
                 <h5 className="description">
                   According to the National Oceanic and Atmospheric
                   Administration, Ted, Scambos, NSIDClead scentist, puts the

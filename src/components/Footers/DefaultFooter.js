@@ -12,7 +12,7 @@ function DefaultFooter() {
       <footer className="footer footer-default">
         <Container>
           <nav>
-            <ul>
+            {/* <ul>
               <li>
                 <a
                   href="https://www.creative-tim.com?ref=nukr-default-footer"
@@ -37,24 +37,24 @@ function DefaultFooter() {
                   Blog
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </nav>
           <div className="copyright" id="copyright">
             © {new Date().getFullYear()}, Designed by{" "}
             <a
-              href="https://www.invisionapp.com?ref=nukr-default-footer"
+              href="/"
               target="_blank"
             >
-              Invision
+              Universidad de Colima
             </a>
-            . Coded by{" "}
+            {/* . Coded by{" "}
             <a
               href="https://www.creative-tim.com?ref=nukr-default-footer"
               target="_blank"
             >
               Creative Tim
             </a>
-            .
+            . */}
           </div>
         </Container>
       </footer>

@@ -1,10 +1,9 @@
 /*eslint-disable*/
 import React from "react";
-
 // reactstrap components
 import { Container,
 Button
- } from "reactstrap";
+  } from "reactstrap";
 // core components
 
 function IndexHeader() {
@@ -43,8 +42,11 @@ function IndexHeader() {
             ></img>
             <h1 className="h1-seo" >LTWeb</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button variant="contained" color="info" size="lg" href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio"
+              <Button variant="contained" color="info" size="lg" href="/login-page"
               ><strong>Ir al simulador</strong></Button>
+          </div>
+          <div>
+  
           </div>
           <h6 className="category category-absolute">
             Universidad de Colima

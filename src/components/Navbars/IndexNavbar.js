@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import InfoSimulador from 'pages/info';
 
 // reactstrap components
@@ -52,12 +52,13 @@ function IndexNavbar() {
           <div className="navbar-translate">
             <NavbarBrand
             // (aquí agregamos el link que llevará al inicio, solo cambiamos link.)
-             href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio" 
-              target="_blank"
+              href="/"
+              // target="_blank" *Para abrir otra ventana en la web*/
               id="navbar-brand"
             >
               Simulador Web
             </NavbarBrand>
+
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -77,7 +78,7 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
-             <Nav navbar>
+              <Nav navbar>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret color="info" className="custom-button">
                   <strong>NOSOTROS</strong>
@@ -86,7 +87,7 @@ function IndexNavbar() {
                   <DropdownItem href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio" >
                     Visita nuestra pagina
                   </DropdownItem>
-                  <DropdownItem onClick={() => <InfoSimulador />}>
+                  <DropdownItem href="/landing-page" onClick={() => <InfoSimulador />}>
                     Acerca del Simulador
                   </DropdownItem>
                 </DropdownMenu>

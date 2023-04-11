@@ -1,0 +1,153 @@
+.main {
+    position: relative;
+    background: #ffffff;
+}
+
+
+/*Clases wrapper*/
+.sidebar-collapse .wrapper {
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    }
+
+.nav-open .sidebar-collapse .wrapper {
+    -webkit-transform: translate3d(-150px, 0, 0);
+    -moz-transform: translate3d(-150px, 0, 0);
+    -o-transform: translate3d(-150px, 0, 0);
+    -ms-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+    }
+
+    .nav-open .sidebar-collapse.menu-on-left .wrapper {
+        -webkit-transform: translate3d(150px, 0, 0);
+        -moz-transform: translate3d(150px, 0, 0);
+        -o-transform: translate3d(150px, 0, 0);
+        -ms-transform: translate3d(150px, 0, 0);
+        transform: translate3d(150px, 0, 0);
+    }
+
+    .burger-menu .wrapper {
+        -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    }    
+
+    /*page-header*/
+    .index-page .page-header {
+        height: 125vh;
+        }
+    .index-page .page-header .container > .content-center {
+        top: 37%;
+    }
+    .index-page .page-header .category-absolute {
+        position: absolute;
+        top: 100vh;
+        margin-top: -60px;
+        padding: 0 15px;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .profile-page .page-header {
+        min-height: 550px;
+    }
+
+    .login-page .page-header:before,
+    .profile-page .page-header:before {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .page-header > .content {
+        margin-top: 12%;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .page-header.page-header-small {
+        min-height: 60vh;
+        max-height: 440px;
+      }
+      .page-header:before {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .page-header > .container {
+        z-index: 2;
+        padding-top: 12vh;
+        padding-bottom: 40px;
+      }
+      .page-header .page-header-image {
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .page-header .content-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 880px;
+    }
+    .page-header footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .page-header .container {
+        height: 100%;
+        z-index: 1;
+        text-align: center;
+        position: relative;
+    }
+    .page-header .category,
+    .page-header .description {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .page-header:after,
+    .page-header:before {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
+    }
+
+    .page-header .container h6.category-absolute {
+        width: 90%;
+    }
+
+    .page-header.page-header-small {
+        min-height: 60vh;
+        max-height: 640px;
+    }
+
+@media only screen and (min-height: 950px) {
+    .index-page .page-header .category-absolute {
+        margin-top: -330px;
+        }
+}
+

@@ -9,7 +9,7 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <nav>
-          <ul>
+          {/* <ul>
             <li>
               <a
                 href="https://www.creative-tim.com?ref=nukr-transparent-footer"
@@ -34,24 +34,24 @@ function TransparentFooter() {
                 Blog
               </a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
         <div className="copyright" id="copyright">
           © {new Date().getFullYear()}, Designed by{" "}
           <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
+            href="/"
             target="_blank"
           >
-            Invision
+            Universidad de Colima
           </a>
-          . Coded by{" "}
+          {/* . Coded by{" "}
           <a
             href="https://www.creative-tim.com?ref=nukr-transparent-footer"
             target="_blank"
           >
             Creative Tim
           </a>
-          .
+          . */}
         </div>
       </Container>
     </footer>
