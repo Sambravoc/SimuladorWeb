@@ -17,12 +17,14 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+// import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
+// import DarkFooter from "components/Footers/DarkFooter";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 function LoginPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+ // const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -36,7 +38,7 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar/>
       <div className="page-header clear-filter" filter-color="blue">
         <div
           className="page-header-image"
@@ -72,40 +74,22 @@ function LoginPage() {
                       </InputGroupAddon>
                       <Input
                         placeholder="Correo Electronico"
-                        type="text"
+                        type="email"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
                       ></Input>
                     </InputGroup>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (lastFocus ? " input-group-focus" : "")
-                      }
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="now-ui-icons text_caps-small"></i>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Name..."
-                        type="text"
-                        onFocus={() => setLastFocus(true)}
-                        onBlur={() => setLastFocus(false)}
-                      ></Input>
-                    </InputGroup>
+
                   </CardBody>
                   <CardFooter className="text-center">
                     <Button
                       block
                       className="btn-round"
                       color="info"
-                      href="#pablo"
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      Entrar
+                      <strong> ENTRAR </strong>
                     </Button>
                   </CardFooter>
                 </Form>
@@ -113,7 +97,7 @@ function LoginPage() {
             </Col>
           </Container>
         </div>
-        <TransparentFooter />
+        <TransparentFooter/>
       </div>
     </>
   );

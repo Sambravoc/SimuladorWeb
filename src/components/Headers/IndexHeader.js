@@ -25,7 +25,8 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter"> 
+     <div className="page-header clear-filter" 
+     style={{backgroundImage: "linear-gradient(to bottom, rgba(102, 82, 66, 1.5), rgba(140, 106, 79, 0))"}}>
         <div
           className="page-header-image"
           style={{
@@ -40,10 +41,10 @@ function IndexHeader() {
               className="n-logo" 
               src={require("assets/img/now-logo.png")}
             ></img>
-            <h1 className="h1-seo" >LTWeb</h1>
+            <h1 className="display-4">StatCast</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button variant="contained" color="black" size="lg" href="/login-page"
-              ><strong>Ir al simulador</strong></Button>
+              <Button href="/login-page"style={{backgroundColor: "#d9c9bc", color: "#fff"}}>
+                <strong style={{fontSize: "20px"}}> Ir al simulador </strong></Button>
           </div>
           <div>
   

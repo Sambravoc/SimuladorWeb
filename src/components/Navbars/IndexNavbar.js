@@ -47,16 +47,15 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="dark">
+      <Navbar className={"fixed-top " + navbarColor} expand="lg">
         <Container>
-          <div className="navbar-translate">
+          <div>
             <NavbarBrand
             // (aquí agregamos el link que llevará al inicio, solo cambiamos link.)
               href="/"
-              // target="_blank" *Para abrir otra ventana en la web
-              id="navbar-brand"
-            >
-              Simulador Web
+              // target="_blank" * Para abrir otra ventana en la web
+              id="navbar-brand">
+              <strong style={{fontSize: "16px"}}>INICIO</strong>
             </NavbarBrand>
 
             <button
@@ -80,14 +79,14 @@ function IndexNavbar() {
           >
               <Nav navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret color="info" className="custom-button">
+                <DropdownToggle nav caret color="info" style={{fontSize: "16px"}}>
                   <strong>NOSOTROS</strong>
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/grupo/marco-antonio-pérez-gonzález?authuser=0" >
+                  <DropdownItem style={{fontSize: "13px"}}  href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/grupo/marco-antonio-pérez-gonzález?authuser=0">
                     ¡Visita nuestra página!
                   </DropdownItem>
-                  <DropdownItem href="/landing-page" onClick={() => <InfoSimulador />}>
+                  <DropdownItem href="/landing-page" style={{fontSize: "13px"}} onClick={() => <InfoSimulador />}>
                     Acerca del Simulador
                   </DropdownItem>
                 </DropdownMenu>
