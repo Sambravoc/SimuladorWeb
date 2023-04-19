@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
-  UncontrolledDropdown,
+  //UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip,
+  //UncontrolledTooltip,
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -55,9 +55,9 @@ function ExamplesNavbar() {
             >
               Simulador Web
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
+            {/* <UncontrolledTooltip target="#navbar-brand">
               Designed by Invision. Coded by Creative Tim
-            </UncontrolledTooltip>
+            </UncontrolledTooltip> */}
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
