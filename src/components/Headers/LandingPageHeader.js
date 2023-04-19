@@ -35,7 +35,7 @@ function LandingPageHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Medidor de Potencias</h1>
+            <h1 className="title">Acerca del simulador</h1>
             <div className="text-center">
             </div>
           </Container>
