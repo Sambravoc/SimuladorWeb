@@ -2901,7 +2901,7 @@ p {
 } */
 
 .text-black {
-  color: #444;
+  color: rgb(136, 0, 0);
 }
 
 .blockquote {

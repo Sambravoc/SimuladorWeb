@@ -1,6 +1,8 @@
 import React from "react";
 
+// para agregar el carousel, solo pones esto --> <CarouselSection/>
 // reactstrap components
+
 import {
   Button,
   Input,
@@ -15,6 +17,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+
 import DefaultFooter from "components/Footers/DarkFooter";
 import CarouselSection from "views/index-sections/Carousel";
 import DarkFooter from "components/Footers/DarkFooter";
@@ -38,56 +41,56 @@ function LandingPage() {
       <ExamplesNavbar />
       <div className="wrapper">
         <LandingPageHeader />
-      <div className="main ml-auto mr-auto text-center">
-      <h2 className="title">Who we are?</h2>
-        <CarouselSection/>
-      </div>
         <div className="section section-about-us">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
+              <Col className="ml-auto mr-auto text-center " md="12">
+                <h4 className="display-4">¡Bienvenido a StatCast!</h4>
+                <h5 className="display-9">
+                <br/> 
+                StatCast es un simulador diseñado para ayudarte en la medición de potencias, permitiéndote conocer 
+                como se comportará el perfil de consumo energético y de esta manera, lograr que la toma de decisiones 
+                sobre las operaciones y las estrategias se tomen en el momento y de manera más eficiente y precisa a nivel de: 
+                <br/> 
+                <br/> 
+                <ul>
+                  <li>Generación</li>
+                  <li>Transmisión</li>
+                  <li>Distribución</li>
+                </ul>
                 </h5>
               </Col>
+              <br/> 
             </Row>
-            <div className="separator separator-primary"></div>
+            <div className="separator separator-secondary"></div>
             <div className="section-story-overview">
               <Row>
-                <Col md="6">
+                <Col md="3">
                   <div
-                    className="image-container image-left"
+                    className="image-container image-left "
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg") + ")"
+                        "url(" + require("assets/img/bg3.jpg") + ")" ,
                     }}
                   >
-                    <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
-                      <br></br>
-                      <small>-NOAA</small>
-                    </p>
                   </div>
                   <div
                     className="image-container"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
+                        "url(" + require("assets/img/bg6.jpg") + ")"
                     }}
                   ></div>
                 </Col>
-                <Col md="5">
+                <Col md="2">
                   <div
                     className="image-container image-right"
                     style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg") + ")"
+                      backgroundImage: 
+                        `url(${require("assets/img/estadistica.jpg")})`,
+                      height: "500px", // ajustar según la altura deseada
+                      width: "300px", // ajustar según la anchura deseada
+                      backgroundSize: "auto 100%" // asegurarse de que la imagen se ajuste correctamente
                     }}
                   ></div>
                   <h3>

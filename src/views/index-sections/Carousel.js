@@ -25,8 +25,8 @@ const items = [
   },
   {
     src: require("assets/img/bg4.jpg"),
-    altText: "Yellowstone National Park, United States",
-    caption: "Yellowstone National Park, United States"
+    altText: "Mejoría en las tomas de decisiones",
+    caption: "Mejoría en las tomas de decisiones"
   }
 ];
 
@@ -58,7 +58,7 @@ function CarouselSection() {
       <div className="section" id="carousel">
         <Container>
           <Row className="justify-content-center">
-            <Col lg="max" md="max">
+            <Col lg="7" md="7">
               <Carousel
                 activeIndex={activeIndex}
                 next={next}

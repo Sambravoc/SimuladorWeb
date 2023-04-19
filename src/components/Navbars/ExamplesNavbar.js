@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
@@ -53,7 +53,7 @@ function ExamplesNavbar() {
               href="/"
               id="navbar-brand"
             >
-              Simulador Web
+              INICIO
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -76,13 +76,8 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/landing-page" tag={Link}>
-                  Acerca de
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio">
-                  Pagina
+                <NavLink href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/grupo/marco-antonio-pérez-gonzález?authuser=0">
+                  Página
                 </NavLink>
               </NavItem>
             </Nav>
