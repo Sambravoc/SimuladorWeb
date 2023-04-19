@@ -9,9 +9,9 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
+          © {new Date().getFullYear()},{" "}
           <a
-            href="/"
+            href="https://www.ucol.mx"
             target="_blank"
           >
             Universidad de Colima
