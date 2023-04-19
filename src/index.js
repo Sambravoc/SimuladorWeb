@@ -29,21 +29,22 @@ import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-import BasicElements from "views/index-sections/BasicElements";
-import CompleteExamples from "views/index-sections/CompleteExamples";
+//import ProfilePage from "views/examples/ProfilePage.js";
+//import BasicElements from "views/index-sections/BasicElements";
+//import CompleteExamples from "views/index-sections/CompleteExamples";
 //import Download from "views/index-sections/Download";
-import Examples from "views/index-sections/Examples";
+//import Examples from "views/index-sections/Examples";
 //import Images from "views/index-sections/Images";
 import Javascript from "views/index-sections/Javascript";
-import Navbars from "views/index-sections/Navbars";
-import { Pagination, PaginationItem } from "reactstrap";
-import SignUp from "views/index-sections/SignUp";
-import Tabs from "views/index-sections/Tabs";
+//import Navbars from "views/index-sections/Navbars";
+//import { Pagination, PaginationItem } from "reactstrap";
+//import SignUp from "views/index-sections/SignUp";
+//import Tabs from "views/index-sections/Tabs";
 import Typography from "views/index-sections/Typography";
 import CarouselSection from "views/index-sections/Carousel";
-import Notifications from "views/index-sections/Notifications";
-import PaginationSection from "views/index-sections/Pagination";
+//import CompleteExamples from "views/index-sections/CompleteExamples";
+//import Notifications from "views/index-sections/Notifications";
+//import PaginationSection from "views/index-sections/Pagination";
 //import BasicElements from "views/index-sections/BasicElements";
 
 
@@ -63,17 +64,13 @@ root.render(
           render={(props) => <LandingPage {...props} />}
         />
         <Route
-          path="/profile-page"
-          render={(props) => <ProfilePage {...props} />}
-        />
-        <Route
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
         />
   
         <Route
           path="/x"
-          render={(props) => <Navbars {...props} />}
+          render={(props) => <Javascript {...props} />}
         /> 
         
         <Redirect to="/index" />
