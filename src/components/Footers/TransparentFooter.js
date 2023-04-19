@@ -9,8 +9,13 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}
-          <a href="/" target="_blank"> Universidad de Colima </a>
+          © {new Date().getFullYear()},{" "}
+          <a
+            href="https://www.ucol.mx"
+            target="_blank"
+          >
+            Universidad de Colima
+          </a>
         </div>
       </Container>
     </footer>

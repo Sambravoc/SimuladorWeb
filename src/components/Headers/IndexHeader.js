@@ -47,7 +47,6 @@ function IndexHeader() {
                 <strong style={{fontSize: "20px"}}> Ir al simulador </strong></Button>
           </div>
           <div>
-  
           </div>
           <h6 className="category category-absolute">
             Universidad de Colima
