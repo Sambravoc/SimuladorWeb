@@ -42,7 +42,7 @@ function IndexHeader() {
             ></img>
             <h1 className="h1-seo" >LTWeb</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button variant="contained" color="info" size="lg" href="/login-page"
+              <Button variant="contained" color="black" size="lg" href="/login-page"
               ><strong>Ir al simulador</strong></Button>
           </div>
           <div>

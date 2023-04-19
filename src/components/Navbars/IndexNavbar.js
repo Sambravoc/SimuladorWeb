@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [navbarColor, setNavbarColor] = React.useState("navbar-info");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
     const updateNavbarColor = () => {
@@ -47,7 +47,7 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="dark">
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
@@ -84,8 +84,8 @@ function IndexNavbar() {
                   <strong>NOSOTROS</strong>
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/inicio" >
-                    Visita nuestra pagina
+                  <DropdownItem href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/grupo/marco-antonio-pérez-gonzález?authuser=0" >
+                    ¡Visita nuestra página!
                   </DropdownItem>
                   <DropdownItem href="/landing-page" onClick={() => <InfoSimulador />}>
                     Acerca del Simulador
