@@ -3,6 +3,7 @@ import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js"; //loanding page
 import DarkFooter from "components/Footers/DarkFooter.js";
+import CarouselSection from "./index-sections/Carousel.js";
 
 
 import Typography from "./index-sections/Typography.js";
@@ -30,6 +31,7 @@ function Index() {
          <IndexHeader /> {/*loanding page */}
         <div className="main">
         <Typography />
+        <CarouselSection/>
         </div>
 
         <DarkFooter />

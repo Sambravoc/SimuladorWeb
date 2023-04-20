@@ -14,13 +14,9 @@ import {
   Col
 } from "reactstrap";
 
-// core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-
-import DefaultFooter from "components/Footers/DarkFooter";
-import CarouselSection from "views/index-sections/Carousel";
-import DarkFooter from "components/Footers/DarkFooter";
+import TransparentFooter from "components/Footers/TransparentFooter";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -38,236 +34,54 @@ function LandingPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <LandingPageHeader />
         <div className="section section-about-us">
           <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center " md="12">
-                <h4 className="display-4">¡Bienvenido a StatCast!</h4>
-                <h5 className="display-9">
-                <br/> 
-                StatCast es un simulador diseñado para ayudarte en la medición de potencias, permitiéndote conocer 
-                como se comportará el perfil de consumo energético y de esta manera, lograr que la toma de decisiones 
-                sobre las operaciones y las estrategias se tomen en el momento y de manera más eficiente y precisa a nivel de: 
-                <br/> 
-                <br/> 
-                <ul>
-                  <li>Generación</li>
-                  <li>Transmisión</li>
-                  <li>Distribución</li>
-                </ul>
-                </h5>
-              </Col>
-              <br/> 
-            </Row>
+          <h3 className="title">Funcionalidad</h3>
+                  <h5 className="display-9">
+                    La función del simulador web es evaluar y aplicar métodos estadísticos para  hacer el análisis y el pronóstico de las curvas 
+                    características de perfiles de consumo energético. Estas curvas pueden ser utilizadas para analizar patrones de consumo de energía
+                    y para predecir la demanda futura de energía.</h5>
+                  <br/>
+                  <h5 className="display-9">
+                    Una vez ingresando al simulador, podrás encontrar diferentes opciones para su uso, eligiendo diferentes opciones de 
+                    modelo, así como método de ajuste/pronóstico y utilizar datos datos reales de consumo energético.
+                  </h5>
             <div className="separator separator-secondary"></div>
             <div className="section-story-overview">
               <Row>
-                <Col md="3">
-                  <div
-                    className="image-container image-left "
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")" ,
-                    }}
-                  >
-                  </div>
-                  <div
-                    className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg6.jpg") + ")"
-                    }}
-                  ></div>
+              <Col  md="3">
+                    <img
+                      alt="..."
+                      className="rounded-circle img-fluid img-raised"
+                      src={require("assets/img/foco.jpg")}
+                    ></img>
                 </Col>
-                <Col md="2">
-                  <div
-                    className="image-container image-right"
-                    style={{
-                      backgroundImage: 
-                        `url(${require("assets/img/estadistica.jpg")})`,
-                      height: "500px", // ajustar según la altura deseada
-                      width: "300px", // ajustar según la anchura deseada
-                      backgroundSize: "auto 100%" // asegurarse de que la imagen se ajuste correctamente
-                    }}
-                  ></div>
-                  <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
+                <Col  md="8">
+                <h3>
+                    ¿Qué métodos son empleados para obtener los resultados de las potencias?
                   </h3>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
-                  <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
-                  </p>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
+                  <h5>
+                    AGREGAR INFORMACIÓN ACERCA DE LOS MÉTODOS Y/O FORMULAS ETC.
+                  </h5>
+                  <h5>
+                    MÁS INFORMACIÓN DE SER NECESARIA.
+                  </h5>
+                  <h5>
+                    MÁS INFORMACIÓN IGUAL DE SER NECESARIA.
+                  </h5>
                 </Col>
               </Row>
             </div>
           </Container>
         </div>
-        <div className="section section-team text-center">
-          <Container>
-            <h2 className="title">Here is our team</h2>
-            <div className="team">
-              <Row>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/avatar.jpg")}
-                    ></img>
-                    <h4 className="title">Romina Hadid</h4>
-                    <p className="category text-info">Model</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook-square"></i>
-                    </Button>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/ryan.jpg")}
-                    ></img>
-                    <h4 className="title">Ryan Tompson</h4>
-                    <p className="category text-info">Designer</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-linkedin"></i>
-                    </Button>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/eva.jpg")}
-                    ></img>
-                    <h4 className="title">Eva Jenner</h4>
-                    <p className="category text-info">Fashion</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-google-plus"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-youtube"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </Container>
-        </div>
+        <hr/>
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">Want to work with us?</h2>
-            <p className="description">Your project is very important to us.</p>
+            <h2 className="title">¿Tienes alguna duda?</h2>
+            <h5>Contáctanos, estaremos felices por comunicarnos contigo. </h5>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                 <InputGroup
@@ -281,7 +95,7 @@ function LandingPage() {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="First Name..."
+                    placeholder="Nombre"
                     type="text"
                     onFocus={() => setFirstFocus(true)}
                     onBlur={() => setFirstFocus(false)}
@@ -298,8 +112,8 @@ function LandingPage() {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="Email..."
-                    type="text"
+                    placeholder="Correo Electrónico.."
+                    type="mail"
                     onFocus={() => setLastFocus(true)}
                     onBlur={() => setLastFocus(false)}
                   ></Input>
@@ -308,7 +122,7 @@ function LandingPage() {
                   <Input
                     cols="80"
                     name="name"
-                    placeholder="Type a message..."
+                    placeholder="Escribe tu mensaje..."
                     rows="4"
                     type="textarea"
                   ></Input>
@@ -317,19 +131,18 @@ function LandingPage() {
                   <Button
                     block
                     className="btn-round"
-                    color="info"
-                    href="#pablo"
+                    style={{backgroundColor: "#1346d9", color: "#fff"}}
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    Send Message
+                    ENVIAR
                   </Button>
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
-        <DarkFooter />
+        <TransparentFooter />
       </div>
     </>
   );
