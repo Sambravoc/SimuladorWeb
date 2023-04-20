@@ -1,7 +1,9 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container,
+Row,
+Col} from "reactstrap";
 
 // core components
 
@@ -10,16 +12,25 @@ function Typography() {
     <>
       <div className="section">
         <Container>
-          <h3 className="title">Funcionalidad</h3>
-                  <p>
-                    La función del simulador web es evaluar y aplicar métodos estadísticos para  hacer el análisis y el pronóstico de las curvas 
-                    características de perfiles de consumo energético. Estas curvas pueden ser utilizadas para analizar patrones de consumo de energía
-                    y para predecir la demanda futura de energía.</p>
-                  <br/>
-                  <p> 
-                    Una vez ingresando al simulador, podrás encontrar diferentes opciones para su uso, eligiendo diferentes opciones de 
-                    modelo, así como método de ajuste/pronóstico y utilizar datos datos reales de consumo energético.
-                  </p>
+        <Row>
+              <Col className="ml-auto mr-auto" md="12">
+                <h4 className="display-4 text-center">¡Bienvenido a StatCast!</h4>
+                <h5 className="display-9">
+                <br/> 
+                StatCast es un simulador diseñado para ayudarte en la medición de potencias, permitiéndote conocer 
+                como se comportará el perfil de consumo energético y de esta manera, lograr que la toma de decisiones 
+                sobre las operaciones y las estrategias se tomen en el momento y de manera más eficiente y precisa a nivel de: 
+                <br/> 
+                <br/> 
+                <ul>
+                  <li className="text-center">Generación</li>
+                  <li className="text-center">Transmisión</li>
+                  <li className="text-center">Distribución</li>
+                </ul>
+                </h5>
+              </Col>
+              <br/> 
+            </Row>
         </Container>
       </div>
     </>

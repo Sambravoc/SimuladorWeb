@@ -25,9 +25,9 @@ function IndexHeader() {
 
   return (
     <>
-     <div className="page-header clear-filter" 
-     style={{backgroundImage: "linear-gradient(to bottom, rgba(102, 82, 66, 1.5), rgba(140, 106, 79, 0))"}}>
-        <div
+     <div className="page-header page-header-small clear-filter" 
+     style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
+      <div
           className="page-header-image"
           style={{
             backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
@@ -37,13 +37,12 @@ function IndexHeader() {
         <Container>
           <div className="content-center brand">
             <img
-              alt="..." width="auto" height="150"
-              className="n-logo" 
+              alt="..." width="auto" height="100"
               src={require("assets/img/now-logo.png")}
             ></img>
             <h1 className="display-4">StatCast</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button href="/login-page"style={{backgroundColor: "#d9c9bc", color: "#fff"}}>
+              <Button href="/login-page" style={{backgroundColor: "#1346d9", color: "#fff"}}>
                 <strong style={{fontSize: "20px"}}> Ir al simulador </strong></Button>
           </div>
           <div>

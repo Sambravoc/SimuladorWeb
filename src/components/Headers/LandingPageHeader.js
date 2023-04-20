@@ -25,11 +25,12 @@ function LandingPageHeader() {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className="page-header page-header-small clear-filter" 
+     style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/fondlanding.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
