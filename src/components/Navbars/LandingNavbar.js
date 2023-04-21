@@ -55,6 +55,10 @@ function IndexNavbar() {
               href="/" id="navbar-brand">
               <strong style={{fontSize: "16px"}}>INICIO</strong>
             </NavbarBrand>
+            <NavbarBrand
+              href="/login-page" id="navbar-brand">
+              <strong style={{fontSize: "16px"}}>IR AL SIMULADOR</strong>
+            </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {

@@ -4,23 +4,23 @@ import React from "react";
 // reactstrap components
 
 import {
-  Button,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
+  // Button,
+  // Input,
+  // InputGroupAddon,
+  // InputGroupText,
+  // InputGroup,
   Container,
   Row,
   Col
 } from "reactstrap";
 
-import IndexNavbar from "components/Navbars/IndexNavbar";
+import LandingNavbar from "components/Navbars/LandingNavbar";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
 
 function LandingPage() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+  // const [firstFocus, setFirstFocus] = React.useState(false);
+  // const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -34,7 +34,7 @@ function LandingPage() {
   }, []);
   return (
     <>
-      <IndexNavbar />
+      <LandingNavbar />
       <div className="wrapper">
         <LandingPageHeader />
         <div className="section section-about-us">
@@ -78,7 +78,7 @@ function LandingPage() {
           </Container>
         </div>
         <hr/>
-        <div className="section section-contact-us text-center">
+        {/* <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">¿Tienes alguna duda?</h2>
             <h5>Contáctanos, estaremos felices por comunicarnos contigo. </h5>
@@ -141,7 +141,7 @@ function LandingPage() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         <TransparentFooter />
       </div>
     </>
