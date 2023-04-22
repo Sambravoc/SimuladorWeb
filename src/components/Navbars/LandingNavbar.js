@@ -1,8 +1,7 @@
 import React from "react";
 import InfoSimulador from 'pages/info';
 
-// target="_blank" * Para abrir otra ventana en la web
-// reactstrap components
+// Components
 import {
   Collapse,
   NavbarBrand,
@@ -55,10 +54,6 @@ function IndexNavbar() {
               href="/" id="navbar-brand">
               <strong style={{fontSize: "16px"}}>INICIO</strong>
             </NavbarBrand>
-            <NavbarBrand
-              href="/login-page" id="navbar-brand">
-              <strong style={{fontSize: "16px"}}>IR AL SIMULADOR</strong>
-            </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -78,11 +73,16 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
-              <Nav navbar>
+              <Nav navbar>   
+              <NavbarBrand href="/login-page" id="navbar-brand"  nav caret color="info" style={{fontSize: "16px"}}>
+                  <strong>  Ir al Simulador</strong>
+                </NavbarBrand>             
               <UncontrolledDropdown nav inNavbar>
+                
                 <DropdownToggle nav caret color="info" style={{fontSize: "16px"}}>
                   <strong>NOSOTROS</strong>
                 </DropdownToggle>
+                
                 <DropdownMenu right>
                   <DropdownItem style={{fontSize: "13px"}} target="_blank"  href="https://sites.google.com/ucol.mx/caucol-116-sistemas-electricos/grupo/marco-antonio-pérez-gonzález?authuser=0">
                     ¡Visita nuestra página!

@@ -7,7 +7,7 @@ Col} from "reactstrap";
 
 // core components
 
-function Typography() {
+function InfoSim() {
   return (
     <>
       <div className="section">
@@ -22,10 +22,10 @@ function Typography() {
                 sobre las operaciones y las estrategias se tomen en el momento y de manera más eficiente y precisa a nivel de: 
                 <br/> 
                 <br/> 
-                <ul>
-                  <li className="text-center">Generación</li>
-                  <li className="text-center">Transmisión</li>
-                  <li className="text-center">Distribución</li>
+                <ul style={{textAlign: 'justify'}}>
+                  <li >Generación.</li>
+                  <li >Transmisión.</li>
+                  <li >Distribución.</li>
                 </ul>
                 </h5>
               </Col>
@@ -37,4 +37,4 @@ function Typography() {
   );
 }
 
-export default Typography;
+export default InfoSim;

@@ -1,8 +1,7 @@
 import React from "react";
 import InfoSimulador from 'pages/info';
 
-// target="_blank" * Para abrir otra ventana en la web
-// reactstrap components
+// Components
 import {
   Collapse,
   NavbarBrand,
