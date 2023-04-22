@@ -1,11 +1,8 @@
 import React from "react";
 
-// reactstrap components
-// import { Button, Container } from "reactstrap"; (este es el original pero yo borré el Button)
+//Components
 
 import { Container } from "reactstrap";
-
-// core components
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
@@ -26,7 +23,7 @@ function LandingPageHeader() {
   return (
     <>
       <div className="page-header page-header-small clear-filter" 
-     style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
+    style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
         <div
           className="page-header-image"
           style={{

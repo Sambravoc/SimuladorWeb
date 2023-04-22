@@ -1,10 +1,9 @@
 /*eslint-disable*/
 import React from "react";
-// reactstrap components
+//Components
 import { Container,
 Button
   } from "reactstrap";
-// core components
 
 function IndexHeader() {
   let pageHeader = React.createRef();
@@ -25,8 +24,8 @@ function IndexHeader() {
 
   return (
     <>
-     <div className="page-header page-header-small clear-filter" 
-     style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
+    <div className="page-header page-header-small clear-filter" 
+    style={{backgroundImage: "linear-gradient(to bottom, #1346d9, rgba(140, 106, 79, 0))"}}>
       <div
           className="page-header-image"
           style={{

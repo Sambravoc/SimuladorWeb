@@ -1,16 +1,14 @@
 import React from "react";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js"; //loanding page
+import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 // import CarouselSection from "./index-sections/Carousel.js";
 
-
-import Typography from "./index-sections/Typography.js";
+import InfoSim from "./index-sections/InfoSim.js";
 import { Route } from "react-router-dom";
 
 <Route></Route>
-
 
 function Index() {
   React.useEffect(() => {
@@ -28,9 +26,9 @@ function Index() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-         <IndexHeader /> {/*loanding page */}
+        <IndexHeader />
         <div className="main">
-        <Typography />
+        <InfoSim />
         {/* <CarouselSection/>  */}
         </div>
 

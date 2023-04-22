@@ -1,16 +1,13 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// reactstrap components
+//Components
 import {
   Collapse,
-  //UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
   Container,
-  //UncontrolledTooltip,
 } from "reactstrap";
 
 function ExamplesNavbar() {

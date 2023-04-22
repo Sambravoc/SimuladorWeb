@@ -1,12 +1,12 @@
 import React,  { useState } from "react";
 
-// reactstrap components
+//Components
 import {
   Button,
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
+  //CardFooter,
   Form,
   Input,
   InputGroupAddon,
@@ -61,9 +61,9 @@ function LoginPage() {
         <div className="content">
           <Container>
           <h2 className="title">Ingresa tu correo electrónico y selecciona que tipo de usuario eres.</h2>
-            <p className="description">Esta información es únicamente para llevar un registro de los usuarios que ingresan. </p>
+            <p className="description" style={{color: 'white'}}>Esta información es únicamente para llevar un registro de los usuarios que ingresan. </p>
             <Col className="ml-auto mr-auto" md="50">
-              <Card className="card-login card-plain">
+              <Card className="card-plain" style={{width: '450px'}}>
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                   </CardHeader>
@@ -80,7 +80,7 @@ function LoginPage() {
                           <i className="now-ui-icons users_circle-08"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input
+                      <Input 
                         placeholder="Correo Electronico"
                         type="email"
                         onFocus={() => setFirstFocus(true)}
@@ -88,45 +88,38 @@ function LoginPage() {
                       ></Input>
                     </InputGroup>           
                   </CardBody>
-                  <CardFooter className="text-center">
-                   <form>
-                      <label style={{ display: 'block', marginBottom: '10px' }}>
-                        <input
-                          type="checkbox"
-                          checked={isStudent}
-                          onChange={handleIsStudentChange}
-                        />
-                        Soy Estudiante
-                      </label>
-                      <label style={{ display: 'block', marginBottom: '10px' }}>
-                        <input
-                          type="checkbox"
-                          checked={isTeacher}
-                          onChange={handleIsTeacherChange}
-                        />
-                        Soy Profesor
-                      </label>
-                      <label style={{ display: 'block', marginBottom: '10px' }}>
-                        <input
-                          type="checkbox"
-                          checked={isVisitor}
-                          onChange={handleIsVisitorChange}
-                        />
-                        Soy Visitante
-                      </label>
-                   </form>
-                     <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
-                      block
-                      className="btn-round"
-                      onClick={(e) => e.preventDefault()}
-                      size="lg"
-                    >
-                      <strong> ENTRAR </strong>
-                    </Button>
-                  </CardFooter>
+                  <form style={ {width: 'min'  }}>
+                    <div >
+                      <input type="radio" id="estudiante" name="opciones" value="estudiante" 
+                      checked={isStudent}
+                      onChange={handleIsStudentChange}/>
+                      <label for="estudiante">Soy Estudiante</label>
+
+                      <input style={{marginLeft: '10px'}} type="radio" id="maestro" name="opciones" value="maestro"
+                      checked={isTeacher}
+                      onChange={handleIsTeacherChange}/>
+                      <label  for="maestro">Soy Maestro</label>
+          
+                      <input style={{marginLeft: '10px'}} type="radio" id="visita" name="opciones" value="visita"
+                      checked={isVisitor}
+                      onChange={handleIsVisitorChange}/>
+                      <label  for="visita">Soy Visitante</label>
+                    </div>
+                  </form>
                 </Form>
+                <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
+                    block
+                    className="btn-round"
+                    onClick={(e) => e.preventDefault()}
+                    size="lg"
+                  >
+                    <strong> ENTRAR </strong>
+              </Button>
               </Card>
             </Col>
+            
+
+            
           </Container>
         </div>
         <TransparentFooter/>

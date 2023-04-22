@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 
-// reactstrap components
+//Components
 import { Container } from "reactstrap";
 
 function DarkFooter() {

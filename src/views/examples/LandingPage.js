@@ -1,7 +1,6 @@
 import React from "react";
 
-// para agregar el carousel, solo pones esto --> <CarouselSection/>
-// reactstrap components
+// Components
 
 import {
   // Button,

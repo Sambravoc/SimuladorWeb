@@ -1,6 +1,6 @@
 import React from "react";
 
-// reactstrap components
+//Components
 
 function InfoSimulador() {
   return (
