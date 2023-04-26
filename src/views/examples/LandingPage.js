@@ -15,7 +15,7 @@ import {
 
 import LandingNavbar from "components/Navbars/LandingNavbar";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import TransparentFooter from "components/Footers/TransparentFooter";
+import DarkFooter from "components/Footers/DarkFooter";
 
 function LandingPage() {
   // const [firstFocus, setFirstFocus] = React.useState(false);
@@ -77,71 +77,7 @@ function LandingPage() {
           </Container>
         </div>
         <hr/>
-        {/* <div className="section section-contact-us text-center">
-          <Container>
-            <h2 className="title">¿Tienes alguna duda?</h2>
-            <h5>Contáctanos, estaremos felices por comunicarnos contigo. </h5>
-            <Row>
-              <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                <InputGroup
-                  className={
-                    "input-lg" + (firstFocus ? " input-group-focus" : "")
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons users_circle-08"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Nombre"
-                    type="text"
-                    onFocus={() => setFirstFocus(true)}
-                    onBlur={() => setFirstFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <InputGroup
-                  className={
-                    "input-lg" + (lastFocus ? " input-group-focus" : "")
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons ui-1_email-85"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Correo Electrónico.."
-                    type="mail"
-                    onFocus={() => setLastFocus(true)}
-                    onBlur={() => setLastFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <div className="textarea-container">
-                  <Input
-                    cols="80"
-                    name="name"
-                    placeholder="Escribe tu mensaje..."
-                    rows="4"
-                    type="textarea"
-                  ></Input>
-                </div>
-                <div className="send-button">
-                  <Button
-                    block
-                    className="btn-round"
-                    style={{backgroundColor: "#1346d9", color: "#fff"}}
-                    onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
-                    ENVIAR
-                  </Button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div> */}
-        <TransparentFooter />
+        <DarkFooter />
       </div>
     </>
   );

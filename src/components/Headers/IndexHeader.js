@@ -34,17 +34,15 @@ function IndexHeader() {
           ref={pageHeader}
         ></div>
         <Container>
-          <div className="content-center brand">
+          <div className="content-center brand" style={{marginTop:'60px'}}>
             <img
               alt="..." width="auto" height="100"
               src={require("assets/img/now-logo.png")}
             ></img>
             <h1 className="display-4">StatCast</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button href="/login-page" style={{backgroundColor: "#1346d9", color: "#fff"}}>
+              <Button  className="btn-round" href="/login-page"style={{backgroundColor: "#1346d9", color: "white", marginTop:"50px"}} >
                 <strong style={{fontSize: "20px"}}> Ir al simulador </strong></Button>
-          </div>
-          <div>
           </div>
           <h6 className="category category-absolute">
             Universidad de Colima

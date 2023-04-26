@@ -1,4 +1,4 @@
-import React,  { useState } from "react";
+import React from "react";
 
 //Components
 import {
@@ -20,22 +20,8 @@ import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
 function LoginPage() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [isStudent, setIsStudent] = useState(false);
-  const [isTeacher, setIsTeacher] = useState(false);
-  const [isVisitor, setIsVisitor] = useState(false);
+  const [lastFocus, setLastFocus] = React.useState(false);
 
-  const handleIsStudentChange = (event) => {
-    setIsStudent(event.target.checked);
-  };
-
-  const handleIsTeacherChange = (event) => {
-    setIsTeacher(event.target.checked);
-  };
-
-  const handleIsVisitorChange = (event) => {
-    setIsVisitor(event.target.checked);
-  };
 
   React.useEffect(() => {
     document.body.classList.add("login-page");
@@ -60,66 +46,69 @@ function LoginPage() {
         ></div>
         <div className="content">
           <Container>
-          <h2 className="title">Ingresa tu correo electrónico y selecciona que tipo de usuario eres.</h2>
-            <p className="description" style={{color: 'white'}}>Esta información es únicamente para llevar un registro de los usuarios que ingresan. </p>
+          <h2 className="title">Inicia sesión para acceder al simulador.</h2>
             <Col className="ml-auto mr-auto" md="50">
               <Card className="card-plain" style={{width: '450px'}}>
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                   </CardHeader>
                   <CardBody>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (firstFocus ? " input-group-focus" : "")
-                      } 
-                      // Inicio de formulario
-                    >
+
+                    <InputGroup className={"no-border input-lg"}>
                       <InputGroupAddon addonType="prepend">
+                  
                         <InputGroupText>
-                          <i className="now-ui-icons users_circle-08"></i>
+                          <i className="now-ui-icons ui-1_email-85" style={{color:"white"}}></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input 
-                        placeholder="Correo Electronico"
+                      <Input
+                        placeholder="Correo Electrónico"
                         type="email"
-                        onFocus={() => setFirstFocus(true)}
-                        onBlur={() => setFirstFocus(false)}
+                        onFocus={() => setLastFocus(true)}
+                        onBlur={() => setLastFocus(false)}
                       ></Input>
-                    </InputGroup>           
-                  </CardBody>
-                  <form style={ {width: 'min'  }}>
-                    <div >
-                      <input type="radio" id="estudiante" name="opciones" value="estudiante" 
-                      checked={isStudent}
-                      onChange={handleIsStudentChange}/>
-                      <label for="estudiante">Soy Estudiante</label>
+                    </InputGroup>
 
-                      <input style={{marginLeft: '10px'}} type="radio" id="maestro" name="opciones" value="maestro"
-                      checked={isTeacher}
-                      onChange={handleIsTeacherChange}/>
-                      <label  for="maestro">Soy Maestro</label>
-          
-                      <input style={{marginLeft: '10px'}} type="radio" id="visita" name="opciones" value="visita"
-                      checked={isVisitor}
-                      onChange={handleIsVisitorChange}/>
-                      <label  for="visita">Soy Visitante</label>
-                    </div>
-                  </form>
+                    <InputGroup className={"no-border input-lg"}>
+                      <InputGroupAddon addonType="prepend">
+
+                        <InputGroupText>
+                          <i className="now-ui-icons objects_key-25" style={{color:"white"}}></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Contraseña" 
+                        type="password"
+                        onFocus={() => setLastFocus(true)}
+                        onBlur={() => setLastFocus(false)}
+                      ></Input>
+                    </InputGroup>
+                  </CardBody>
+                  
+                  <InputGroup className={"no-border input-lg" + (lastFocus ? " input-group-focus" : "")}>
+                    </InputGroup>
                 </Form>
+                <br/>
                 <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
                     block
                     className="btn-round"
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    <strong> ENTRAR </strong>
+                    <strong> Iniciar sesión </strong>
               </Button>
+              <br/>
+              <InputGroup className={"border input-lg" + (lastFocus ? " input-group-focus" : "")}>
+              </InputGroup>
+              <br/>
+              <Container>
+                <div className="registrate" style={{color: 'white'}}>
+                <strong className="infoiniciar" style={{color: 'white'}}>¿Aún no tienes una cuenta?</strong>
+                <a href="/register" style={{color: '#F6FB5D', textDecoration: 'underline'}}> Regístrate gratis!</a>
+                </div>
+             </Container>
               </Card>
             </Col>
-            
-
-            
           </Container>
         </div>
         <TransparentFooter/>

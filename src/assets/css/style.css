@@ -57,8 +57,7 @@
         min-height: 550px;
     }
 
-    .login-page .page-header:before,
-    .profile-page .page-header:before {
+    .login-page {
     position: absolute;
     z-index: 0;
     width: 100%;
