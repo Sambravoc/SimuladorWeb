@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Components
 import {
@@ -21,7 +21,34 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 
 function LoginPage() {
   const [lastFocus, setLastFocus] = React.useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
+  //inicio de validacion en base de datos
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const data = { email: email, password: password };
+    fetch('/login-page', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log(data.message);
+          // Aquí puedes redirigir a la página de inicio o hacer cualquier otra acción que desees.
+        } else {
+          console.log(data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
+// fin de validacion en base de datos
 
   React.useEffect(() => {
     document.body.classList.add("login-page");
@@ -34,6 +61,7 @@ function LoginPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
   return (
     <>
       <IndexNavbar/>
@@ -49,7 +77,7 @@ function LoginPage() {
           <h2 className="title">Inicia sesión para acceder al simulador.</h2>
             <Col className="ml-auto mr-auto" md="50">
               <Card className="card-plain" style={{width: '450px'}}>
-                <Form action="" className="form" method="">
+                <Form action="" className="form" method="" onSubmit={handleLogin}>
                   <CardHeader className="text-center">
                   </CardHeader>
                   <CardBody>
@@ -63,6 +91,8 @@ function LoginPage() {
                       </InputGroupAddon>
                       <Input
                         placeholder="Correo Electrónico"
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -77,8 +107,10 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Contraseña" 
+                        placeholder="Contraseña"
                         type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)} 
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
                       ></Input>
@@ -94,6 +126,7 @@ function LoginPage() {
                     className="btn-round"
                     onClick={(e) => e.preventDefault()}
                     size="lg"
+                    type="submit"
                   >
                     <strong> Iniciar sesión </strong>
               </Button>

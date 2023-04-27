@@ -18,12 +18,24 @@ import {
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
+function estaRegistrado(email) {
+  // Aquí deberías agregar la lógica para verificar si el correo electrónico ya está registrado en tu sitio web
+  // Podrías hacer una llamada a una API, verificar en una base de datos, o cualquier otro método que estés utilizando para manejar la autenticación de usuarios en tu sitio web
+  // En este ejemplo, asumimos que el correo electrónico 'test@example.com' está registrado
+  
+  return email === 'test@example.com';
+}
+
 function Register() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [isStudent, setIsStudent] = useState(false);
   const [isTeacher, setIsTeacher] = useState(false);
   const [isVisitor, setIsVisitor] = useState(false);
+  const [email,     setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
 
   const handleIsStudentChange = (event) => {
     setIsStudent(event.target.checked);
@@ -36,6 +48,33 @@ function Register() {
   const handleIsVisitorChange = (event) => {
     setIsVisitor(event.target.checked);
   };
+
+  const validarRegistro = () => {
+    // Validar que el correo electrónico esté registrado
+    if (!estaRegistrado(email)) {
+      alert("Este correo electrónico no está registrado");
+      return false;
+    }
+  
+    // Validar que la contraseña tenga al menos 8 caracteres, una letra mayúscula y un número
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      alert(
+        "La contraseña debe tener al menos 8 caracteres, una letra mayúscula y un número"
+      );
+      return false;
+    }
+  
+    // Validar que la contraseña y su confirmación coincidan
+    if (password !== confirmPassword) {
+      alert("La contraseña y su confirmación no coinciden");
+      return false;
+    }
+  
+    // Si se llega hasta aquí, la validación ha sido exitosa
+    return true;
+  };
+  
 
   React.useEffect(() => {
     document.body.classList.add("register");
@@ -94,6 +133,8 @@ function Register() {
                         type="email"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       ></Input>
                     </InputGroup>
 
@@ -109,6 +150,8 @@ function Register() {
                         type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       ></Input>
                     </InputGroup>
 
@@ -124,6 +167,8 @@ function Register() {
                         type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                       ></Input>
                     </InputGroup>
                   </CardBody>
@@ -154,9 +199,13 @@ function Register() {
                 <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
                     block
                     className="btn-round"
-                    onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
+                    onClick={() => {
+                    if (validarRegistro()) {
+                      alert("Registro exitoso!");
+                      // Aquí podrías enviar los datos del formulario a tu servidor para registrar al usuario
+                    }
+                  }}
+                    size="lg">
                     <strong> Registrarme </strong>
               </Button>
               <br/>
