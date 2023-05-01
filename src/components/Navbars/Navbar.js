@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("bg-azul");
+  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
     const updateNavbarColor = () => {
@@ -28,7 +28,7 @@ function IndexNavbar() {
         document.documentElement.scrollTop < 400 ||
         document.body.scrollTop < 400
       ) {
-        setNavbarColor("bg-azul");
+        setNavbarColor("navbar-transparent");
       }
     };
     window.addEventListener("scroll", updateNavbarColor);

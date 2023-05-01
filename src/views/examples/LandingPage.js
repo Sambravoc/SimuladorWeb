@@ -13,9 +13,9 @@ import {
   Col
 } from "reactstrap";
 
-import LandingNavbar from "components/Navbars/LandingNavbar";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DarkFooter from "components/Footers/DarkFooter";
+import IndexNavbar from "components/Navbars/Navbar";
 
 function LandingPage() {
   // const [firstFocus, setFirstFocus] = React.useState(false);
@@ -33,7 +33,7 @@ function LandingPage() {
   }, []);
   return (
     <>
-      <LandingNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <LandingPageHeader />
         <div className="section section-about-us">

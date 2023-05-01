@@ -118,6 +118,7 @@ function Register() {
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
 
@@ -135,6 +136,7 @@ function Register() {
                         onBlur={() => setLastFocus(false)}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
 
@@ -152,6 +154,7 @@ function Register() {
                         onBlur={() => setLastFocus(false)}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
 
@@ -163,12 +166,13 @@ function Register() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Confirme su contraseña"
+                        placeholder="Confirme su contraseña" 
                         type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
                   </CardBody>
@@ -176,24 +180,24 @@ function Register() {
                   <InputGroup className={"no-border input-lg"}>
                     </InputGroup>
 
-                  <form style={ {width: 'auto'}}>
+                  <div style={ {width: 'auto'}}>
                     <div >
                       <input type="radio" id="estudiante" name="opciones" value="estudiante" 
                       checked={isStudent}
                       onChange={handleIsStudentChange}/>
-                      <label for="estudiante">Soy Estudiante</label>
+                      <label >Soy Estudiante</label>
 
                       <input style={{marginLeft: '40px'}} type="radio" id="maestro" name="opciones" value="maestro"
                       checked={isTeacher}
                       onChange={handleIsTeacherChange}/>
-                      <label  for="maestro"> Soy Maestro</label>
+                      <label  > Soy Maestro</label>
   
                       <input style={{marginLeft: '40px'}} type="radio" id="visita" name="opciones" value="visita"
                       checked={isVisitor}
                       onChange={handleIsVisitorChange}/>
-                      <label  for="visita"> Soy Visitante</label>
+                      <label  > Soy Visitante</label>
                     </div>
-                  </form>
+                  </div>
                 </Form>
                 <br/>
                 <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
@@ -217,7 +221,7 @@ function Register() {
                 <strong className="infoiniciar" style={{color: 'white'}}>¿Ya tienes una cuenta?</strong>
                 <a href="/login-page" style={{color: '#F6FB5D', textDecoration: 'underline'}}> Inicia sesión!</a>
                 </div>
-             </Container>
+              </Container>
               </Card>
             </Col>
           </Container>

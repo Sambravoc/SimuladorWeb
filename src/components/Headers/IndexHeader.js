@@ -41,7 +41,7 @@ function IndexHeader() {
             ></img>
             <h1 className="display-4">StatCast</h1>
             <h3>Simulador Web para la medición de potencias.</h3>
-              <Button  className="btn-round" href="/login-page"style={{backgroundColor: "#1346d9", color: "white", marginTop:"50px"}} >
+              <Button  className="btn-lg" href="/login-page"style={{backgroundColor: "#1346d9", color: "white", marginTop:"100px"}} >
                 <strong style={{fontSize: "20px"}}> Ir al simulador </strong></Button>
           </div>
           <h6 className="category category-absolute">

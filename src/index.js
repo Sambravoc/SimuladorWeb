@@ -14,6 +14,9 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import Javascript from "views/index-sections/Javascript";
 import Register from "views/examples/Register";
+import InfoSimPage from "views/examples/InfoSimPage";
+import SimuladorPM from "views/examples/SimuladorPM";
+import SimuladorSE from "views/examples/SimuladorSE";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -36,8 +39,16 @@ root.render(
           render={(props) => <Register {...props} />}
         />
         <Route
-          path="/x"
-          render={(props) => <Javascript {...props} />}
+          path="/informacion-simulador"
+          render={(props) => <InfoSimPage {...props} />}
+        /> 
+        <Route
+          path="/simulador-pm"
+          render={(props) => <SimuladorPM {...props} />}
+        /> 
+        <Route
+          path="/simulador-se"
+          render={(props) => <SimuladorSE {...props} />}
         /> 
         <Route
           path="/x"

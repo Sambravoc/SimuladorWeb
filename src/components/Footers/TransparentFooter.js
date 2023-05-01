@@ -6,11 +6,11 @@ import { Container } from "reactstrap";
 
 function TransparentFooter() {
   return (
-    <footer className="footer">
+    <footer className="footer ">
       <Container>
         <div className="copyright" id="copyright">
           © {new Date().getFullYear()},{" "}
-          <a href="https://www.ucol.mx" target="_blank" style={{color: 'white', textDecoration: 'underline'}}>
+          <a href="https://www.ucol.mx" target="_blank">
             Universidad de Colima
           </a>
         </div>
