@@ -90,12 +90,13 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Correo Electrónico"
+                        placeholder="Correo Electrónico" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
 
@@ -113,6 +114,7 @@ function LoginPage() {
                         onChange={(e) => setPassword(e.target.value)} 
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        style={{color:"white"}}
                       ></Input>
                     </InputGroup>
                   </CardBody>
@@ -121,12 +123,13 @@ function LoginPage() {
                     </InputGroup>
                 </Form>
                 <br/>
-                <Button style={{backgroundColor: "#1346d9", color: "#fff"}}
+                <Button  style={{backgroundColor: "#1346d9", color: "#fff"}}
                     block
                     className="btn-round"
-                    onClick={(e) => e.preventDefault()}
+                    //onClick={(e) => e.preventDefault()}
                     size="lg"
                     type="submit"
+                    href="/informacion-simulador"
                   >
                     <strong> Iniciar sesión </strong>
               </Button>

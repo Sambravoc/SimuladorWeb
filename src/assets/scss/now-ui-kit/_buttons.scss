@@ -8,7 +8,6 @@
     border: none;
     border-radius: $border-radius-small;
     padding: $padding-btn-vertical $padding-btn-horizontal;
-    cursor: pointer;
 
     @include btn-styles($default-color, $default-states-color);
 
@@ -156,53 +155,82 @@
     right: 8px;
 }
 
-.btn-facebook {
-  &,
-  &:hover,
-  &focus,
-  &:active,
-  &:active:focus {
-    color: $social-facebook !important;
-  }
+    .btn-facebook {
+    &,
+    &:hover,
+    &focus,
+    &:active,
+    &:active:focus {
+        color: $social-facebook !important;
+    }
+    }
+
+    .btn-twitter {
+
+    &,
+    &:hover,
+    &focus,
+    &:active,
+    &:active:focus {
+        color: $social-twitter !important;
+    }
+    }
+
+    .btn-google {
+    &,
+    &:hover,
+    &focus,
+    &:active,
+    &:active:focus {
+        color: $social-google !important;
+    }
+    }
+
+    .btn-github {
+    &,
+    &:hover,
+    &focus,
+    &:active,
+    &:active:focus {
+        color: $social-github !important;
+    }
+    }
+
+    .btn-linkedin {
+    &,
+    &:hover,
+    &focus,
+    &:active,
+    &:active:focus {
+        color: $social-linkedin !important;
+    }
 }
 
-.btn-twitter {
-
-  &,
-  &:hover,
-  &focus,
-  &:active,
-  &:active:focus {
-    color: $social-twitter !important;
-  }
+.btn-inf{
+    background-color: #1346d9;
+    cursor: pointer;
+    color: #fff; 
+    margin: 15px; 
+    margin-left: 150px;
+    width: 250px; 
+    height: 50px;
+    border-radius: 18px;
 }
 
-.btn-google {
-  &,
-  &:hover,
-  &focus,
-  &:active,
-  &:active:focus {
-    color: $social-google !important;
-  }
-}
+.btn-simu{
+    border-width: $border-thin;
+    border-radius: $btn-round-radius !important;
+    padding: $padding-btn-vertical  $padding-round-horizontal;
+    background-color: #021652;
+    align-content: center;
+    cursor: pointer;
+    color: #fff; 
+    margin: 15px; 
+    width: 250px; 
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
 
-.btn-github {
-  &,
-  &:hover,
-  &focus,
-  &:active,
-  &:active:focus {
-    color: $social-github !important;
-  }
-}
-
-.btn-linkedin {
-  &,
-  &:hover,
-  &focus,
-  &:active,
-  &:active:focus {
-    color: $social-linkedin !important;
-  }
 }
