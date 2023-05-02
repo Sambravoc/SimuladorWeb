@@ -211,10 +211,11 @@
     cursor: pointer;
     color: #fff; 
     margin: 15px; 
-    margin-left: 150px;
+    margin-left: 100px;
     width: 250px; 
     height: 50px;
     border-radius: 18px;
+    flex-basis: 30%;
 }
 
 .btn-simu{
@@ -236,14 +237,15 @@
 }
 
 .text-btn{
-    float: right;
-    text-align: left;
+    text-align:justify;
     font-size: large;
     margin: 10px; 
-    margin-right: 10px;
-    margin-left: auto;
-    width: 500px; 
-    height: 50px;
+    margin-right: 300px;
+    margin-left: 100px;
+    width: auto; 
+    height: auto;
+    align-content: center;
+    flex-basis: 70%;
     
 }
 
@@ -266,3 +268,8 @@
     text-align: center;
 
 }
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    }
