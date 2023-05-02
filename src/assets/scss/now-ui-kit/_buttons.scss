@@ -207,7 +207,7 @@
 }
 
 .btn-inf{
-    background-color: #1346d9;
+    background-color: #021652;
     cursor: pointer;
     color: #fff; 
     margin: 15px; 
@@ -221,11 +221,43 @@
     border-width: $border-thin;
     border-radius: $btn-round-radius !important;
     padding: $padding-btn-vertical  $padding-round-horizontal;
+    background-color: #1346d9;
+    align-content: center;
+    cursor: pointer;
+    color: #fff; 
+    margin: 15px; 
+    width: 250px; 
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.text-btn{
+    float: right;
+    text-align: left;
+    font-size: large;
+    margin: 10px; 
+    margin-right: 10px;
+    margin-left: auto;
+    width: 500px; 
+    height: 50px;
+    
+}
+
+.btn-simu2{
+    float: right;
+    border-width: $border-thin;
+    border-radius: $btn-round-radius !important;
+    padding: $padding-btn-vertical  $padding-round-horizontal;
     background-color: #021652;
     align-content: center;
     cursor: pointer;
     color: #fff; 
     margin: 15px; 
+    margin-right: 20px;
     width: 250px; 
     height: 50px;
     display: block;
